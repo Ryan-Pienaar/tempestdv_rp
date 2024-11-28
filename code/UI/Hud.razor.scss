@@ -1,11 +1,11 @@
 
-$text-color: #f80;
+$text-color: #4cff00;
 
 .vitals
 {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: -50px;
+    left: -100px;
     color: white;
     font-size: 64px;
     font-family: Poppins;
@@ -14,11 +14,10 @@ $text-color: #f80;
 
 }
 
-.health
-{
+.health {
     color: $text-color;
     mix-blend-mode: lighten;
-    text-shadow: 0px 0px 6px #f506;
+    text-shadow: 0px 0px 6px #4cff00;
     width: 100px;
     justify-content: flex-end;
 }

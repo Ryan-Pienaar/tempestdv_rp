@@ -1,0 +1,52 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Pctemp Skidwars",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "pctempskidwars",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "ambi.computer_monitor#49612",
+        "ambi.house_4#50791",
+        "eurorp.bin#8512",
+        "facepunch.binbag_a1#17181",
+        "facepunch.binbag_pile_a2#17187",
+        "facepunch.cardboard_box#33592",
+        "facepunch.concrete_cast_hs_01#28794",
+        "facepunch.concrete_cast_hs_02#37803",
+        "facepunch.debris_concrete_chunk_15#77570",
+        "facepunch.debris_concrete_chunk_16#77574",
+        "facepunch.floor_tile_blend_02#28795",
+        "facepunch.metal_painted_black_a_hs#29194",
+        "facepunch.plaster_hs_02#28800",
+        "facepunch.plastic_crate_02#47050",
+        "facepunch.studio_light_projector#29115",
+        "fpopium.door_fireexit_frame#48515",
+        "fpopium.door_frame_a#48529",
+        "fpopium.foldabletable_a#55032",
+        "gnomefig.celldoor#58884",
+        "mdlresrc.toolgun#10035",
+        "moonlaneclub.cooled_lava_rock#43840",
+        "nukebox.fatman_bomb#21186",
+        "polyhaven.wooden_table_02#24212",
+        "randkassets.little_atom#23783",
+        "reizer.rzr_jukebox_1a#62024",
+        "rust.concrete_debris_a#25163",
+        "rust.concrete_debris_b#25164",
+        "saandy.caged_light01_wall#35996",
+        "schoolprops.school_chalkboard#38237",
+        "tesssssssssst.untitled_48417841871541#33517"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/pctemp_skidwars.vmap",
+        "ParentPackage": "skyboxify.skyboxify-rp"
+      }
+    }
+  }
+}

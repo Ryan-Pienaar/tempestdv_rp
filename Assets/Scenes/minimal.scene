@@ -58,8 +58,10 @@
           "__type": "Sandbox.Bloom",
           "__guid": "308d42e8-ef37-47c1-bd44-af456b34ba64",
           "BloomColor": {
+            "blend": "Linear",
             "color": [
               {
+                "t": 0,
                 "c": "1,1,1,1"
               },
               {
@@ -71,14 +73,18 @@
           },
           "BloomCurve": [
             {
+              "x": 0,
+              "y": 0,
               "in": -1.6799997,
-              "out": 1.6799997
+              "out": 1.6799997,
+              "mode": "Mirrored"
             },
             {
               "x": 1,
               "y": 1,
               "in": -0.57142836,
-              "out": 0.57142836
+              "out": 0.57142836,
+              "mode": "Mirrored"
             }
           ],
           "Mode": "Additive",
@@ -120,7 +126,7 @@
           "__guid": "053b9354-3f9b-4cbf-837b-932a5a04f3ae",
           "__version": 1,
           "EnableCollision": true,
-          "MapName": "facepunch.datacore",
+          "MapName": "maps/pctemp_skidwars.vmap",
           "NoOrigin": true,
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
@@ -163,5 +169,6 @@
   "Title": "minimal",
   "Description": null,
   "__references": [],
+  "IsValid": true,
   "__version": 2
 }

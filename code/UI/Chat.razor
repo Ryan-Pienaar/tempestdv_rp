@@ -5,31 +5,32 @@
 
 <root>
 
-	<div class="output">
-		@foreach (var entry in Entries)
-		{
+    <div class="output">
+        @foreach (var entry in Entries)
+        {
             <div class="chat_entry">
+                <a class="time">@entry.time</a>
                 @if (entry.steamid > 0)
                 {
                     <div class="avatar" style="background-image: url( avatar:@entry.steamid )"></div>
                 }
-				<div class="author">@entry.author</div>
-				<div class="message">@entry.message</div>
-			</div>
-		}
-	</div>
+                <div class="author">@entry.author</div>
+                <div class="message">@entry.message</div>
+            </div>
+        }
+    </div>
 
-	<div class="input">
-		<TextEntry @ref="InputBox" onsubmit="@ChatFinished"></TextEntry>
-	</div>
-	
+    <div class="input">
+        <TextEntry @ref="InputBox" onsubmit="@ChatFinished"></TextEntry>
+    </div>
+
 </root>
 
 @code
 {
     TextEntry InputBox;
 
-    public record Entry( ulong steamid, string author, string message, RealTimeSince timeSinceAdded );
+    public record Entry( string time, ulong steamid, string author, string message, RealTimeSince timeSinceAdded );
     List<Entry> Entries = new();
 
     protected override void OnUpdate()
@@ -44,7 +45,7 @@
             InputBox.Focus();
         }
 
-        if ( Entries.RemoveAll( x => x.timeSinceAdded > 20.0f ) > 0 )
+        if ( Entries.RemoveAll( x => x.timeSinceAdded > 15.0f ) > 0 )
         {
             StateHasChanged();
         }
@@ -71,12 +72,13 @@
         if (string.IsNullOrWhiteSpace(message))
             return;
 
-        var author = Rpc.Caller.DisplayName;
+        var time = System.DateTime.Now.ToShortTimeString();
+        var author = string.Concat(Rpc.Caller.DisplayName, " > ");
         var steamid = Rpc.Caller.SteamId;
 
-		Log.Info($"{author}: {message}");
+        Log.Info($"{author}: {message}");
 
-        Entries.Add(new Entry(steamid, author, message, 0.0f));
+        Entries.Add(new Entry(time, steamid, author, message, 0.0f));
 		StateHasChanged();
 	}
 
@@ -87,8 +89,8 @@
 
         if (string.IsNullOrWhiteSpace(message))
             return;
-
-        Entries.Add(new Entry(0, "ℹ️", message, 0.0f));
+        var time = System.DateTime.Now.ToShortTimeString();
+        Entries.Add(new Entry(time, 0, "ℹ️", message, 0.0f));
         StateHasChanged();
     }
 

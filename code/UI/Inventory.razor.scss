@@ -1,12 +1,12 @@
-
-Inventory
-{
-    position: absolute;
-    left: 10vw;
-    top: 10vh;
+Inventory {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 1vh;
     font-size: 18px;
-    color: #f80;
-    gap: 8px;
+    color: #4cff00;
+    gap: 12px;
     mix-blend-mode: lighten;
     transition: all 0.2s linear;
 }

@@ -1,8 +1,8 @@
 {
-  "Title": "Walker",
+  "Title": "Skyboxify RP",
   "Type": "game",
-  "Org": "facepunch",
-  "Ident": "walker",
+  "Org": "skyboxify",
+  "Ident": "skyboxify-rp",
   "Schema": 1,
   "IncludeSourceFiles": false,
   "Resources": null,
